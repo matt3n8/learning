@@ -14,5 +14,8 @@ public class Adder extends Math {
 		super(first,second);
 	}
 	
-	
+	public void compute()
+	{
+		result = firstValue + secondValue;
+	}
 }

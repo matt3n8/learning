@@ -7,13 +7,17 @@ package not.sure;
  * @author Matt
  *
  */
-public class Subtracter extends Math {
+public class Subtractor extends Math {
 	
-	public Subtracter(double first, double second)
+	public Subtractor(double first, double second)
 	{
 		super(first,second);
 	}
 	
+	public void compute()
+	{
+		result = firstValue - secondValue;
+	}
 	
 	
 }

@@ -6,7 +6,7 @@ public abstract class Math {
 	protected double secondValue;
 	protected double result;
 	
-	abstract double returnResult();
+	abstract public void compute();
 	
 	public Math(double first, double second)
 	{
@@ -14,7 +14,12 @@ public abstract class Math {
 		this.secondValue = second;
 	}
 	
-	void printResult()
+	public double getResult()
+	{
+		return result;
+	}
+	
+	public void printResult()
 	{
 		System.out.println(result);
 	}
