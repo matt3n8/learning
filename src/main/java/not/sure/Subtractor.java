@@ -7,7 +7,7 @@ package not.sure;
  * @author Matt
  *
  */
-public class Subtractor extends Math {
+public class Subtractor extends Operator {
 	
 	public Subtractor(double first, double second)
 	{

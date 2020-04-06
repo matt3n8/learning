@@ -7,7 +7,7 @@ package not.sure;
  * @author Matt
  *
  */
-public class Adder extends Math {
+public class Adder extends Operator {
 	
 	public Adder(double first, double second)
 	{

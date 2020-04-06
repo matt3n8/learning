@@ -1,6 +1,6 @@
 package not.sure;
 
-public abstract class Math {
+public abstract class Operator {
 	
 	protected double firstValue;
 	protected double secondValue;
@@ -8,7 +8,7 @@ public abstract class Math {
 	
 	abstract public void compute();
 	
-	public Math(double first, double second)
+	public Operator(double first, double second)
 	{
 		this.firstValue = first;
 		this.secondValue = second;

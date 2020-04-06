@@ -17,7 +17,7 @@ public class Main {
 		
 		double result;
 		String resultString;
-		Math mathDriver = null;
+		Operator mathDriver = null;
 		boolean isFunctioning = true;
 		
 		switch(symbol) {
@@ -30,6 +30,8 @@ public class Main {
 		case "*":
 			mathDriver = new Multiplier(value1,value2);
 			break;
+		case "^":
+			mathDriver = new Exponentiator(value1,value2);
 		default:
 			isFunctioning = false;
 			break;

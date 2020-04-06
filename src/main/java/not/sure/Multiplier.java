@@ -1,6 +1,6 @@
 package not.sure;
 
-public class Multiplier extends Math {
+public class Multiplier extends Operator {
 
 	public Multiplier(double first, double second) {
 		super(first, second);
