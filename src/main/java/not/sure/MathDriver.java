@@ -13,7 +13,7 @@ public class MathDriver {
 	 * 
 	 */
 	public MathDriver() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public static Operator getOperator(double value1, double value2, String symbol)

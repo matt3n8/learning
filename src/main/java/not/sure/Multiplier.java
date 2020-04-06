@@ -6,6 +6,7 @@ public class Multiplier extends Operator {
 		super(first, second);
 	}
 
+
 	public void compute() {
 		result = firstValue * secondValue;
 	}
