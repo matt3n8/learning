@@ -2,8 +2,6 @@
  * 
  */
 
-
-
 package not.sure;
 
 /**
@@ -18,7 +16,6 @@ public class Exponentiator extends Operator {
 
 	public void compute() {
 		result = Math.pow(firstValue,secondValue);
-
 	}
 
 }

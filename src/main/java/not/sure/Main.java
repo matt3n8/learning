@@ -14,7 +14,7 @@ public class Main {
 		double value1 = Double.parseDouble(parts[0]);
 		String symbol = parts[1];
 		double value2 = Double.parseDouble(parts[2]);
-		
+		System.out.println(symbol);
 		double result;
 		String resultString;
 		Operator mathDriver = null;
@@ -32,6 +32,7 @@ public class Main {
 			break;
 		case "^":
 			mathDriver = new Exponentiator(value1,value2);
+			break;
 		default:
 			isFunctioning = false;
 			break;
