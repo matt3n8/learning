@@ -10,44 +10,37 @@ public class Main {
 		Scanner myScanner = new Scanner(System.in);
 		System.out.println("Enter equation you want solved: ");
 		String equationLine = myScanner.nextLine();
-		String[] parts = equationLine.split(" ");
-		double value1 = Double.parseDouble(parts[0]);
-		String symbol = parts[1];
-		double value2 = Double.parseDouble(parts[2]);
-		System.out.println(symbol);
+		double value1 = 0;
+		double value2 = 0;
+		String symbol = "";
+		String[] parts;
+		
+		try
+		{
+			parts = equationLine.split(" ");
+			value1 = Double.parseDouble(parts[0]);
+			symbol = parts[1];
+			value2 =  Double.parseDouble(parts[2]);
+		}
+		catch( NumberFormatException e)
+		{
+			System.out.println("Error: two numbers not found");
+		}
 		double result;
 		String resultString;
-		Operator mathDriver = null;
-		boolean isFunctioning = true;
-		
-		switch(symbol) {
-		case "+":
-			mathDriver = new Adder(value1,value2);
-			break;
-		case "-":
-			mathDriver = new Subtractor(value1,value2);
-			break;
-		case "*":
-			mathDriver = new Multiplier(value1,value2);
-			break;
-		case "^":
-			mathDriver = new Exponentiator(value1,value2);
-			break;
-		default:
-			isFunctioning = false;
-			break;
-		}
-		
-		if(isFunctioning) {
+		Operator mathDriver = MathDriver.getOperator(value1, value2, symbol);
+		try
+		{
 			mathDriver.compute();
 			result = mathDriver.getResult();
 			resultString = "The answer is " + result;
+			System.out.println(resultString);
 		}
-		else {
-			resultString = "something went wrong here :(";
+		catch(NullPointerException e)
+		{
+			System.out.println("Something went wrong :( input incorrectly formatted?");
 		}
 		
-		System.out.println(resultString);
 		myScanner.close();
 	}
 
